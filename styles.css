@@ -755,6 +755,7 @@ img { max-width: 100%; height: auto; }
 .motion .hero-text > *:nth-child(4) { animation-delay: .38s; }
 .motion .hero-text > *:nth-child(5) { animation-delay: .5s; }
 .motion .hero-text > *:nth-child(6) { animation-delay: .6s; }
+.motion .hero-text > *:nth-child(7) { animation-delay: .7s; }
 .motion .hero-console { opacity: 0; transform: translateY(20px) scale(.985); animation: rise 1s var(--ease-out) .35s forwards; }
 .motion .hero-stats-wrap .stat-item { opacity: 0; transform: translateY(10px); animation: rise .7s var(--ease-out) forwards; }
 .motion .hero-stats-wrap .stat-item:nth-child(1) { animation-delay: .9s; }
@@ -797,7 +798,6 @@ img { max-width: 100%; height: auto; }
     .stair-total { margin-bottom: 40px; }
     .stair-steps { --bar: 140px; gap: 6px; grid-template-columns: repeat(4, 1fr); }
     .step-meta strong { font-size: 11.5px; line-height: 1.3; word-break: keep-all; }
-    .step-meta span:last-child { display: none; }
     .step-hours { font-size: 11px; left: 6px; top: 6px; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -852,3 +852,19 @@ img { max-width: 100%; height: auto; }
     .log-total-num { font-size: 34px; }
 }
 @media (prefers-reduced-motion: reduce) { .live-dot { animation: none; } }
+
+/* current role line (hero) */
+.hero .role { font-size: 15px; font-weight: 600; color: var(--pine-dark); margin: -12px 0 22px; }
+
+/* #9 mobile: 계단 → 세로 목록 (설명 모두 표시) */
+@media (max-width: 640px) {
+    .stair-steps { grid-template-columns: 1fr; gap: 10px; }
+    .step { grid-template-columns: 76px 1fr; grid-template-rows: auto; align-items: center; gap: 12px; }
+    .step-block { height: 46px; align-self: center; transform-origin: left; }
+    .motion .stair .step-block { transform: scaleX(0); }
+    .motion .stair.in .step-block { transform: scaleX(1); }
+    .step-hours { top: 50%; transform: translateY(-50%); left: 8px; font-size: 12px; }
+    .step-meta { padding-top: 0; }
+    .step-meta strong { font-size: 14px; }
+    .climber { display: none; }
+}
