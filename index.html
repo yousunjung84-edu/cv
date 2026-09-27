@@ -28,7 +28,7 @@
             <li><a href="#conferences" data-section="conferences"><span class="dot"></span><span class="label">학술대회</span></a></li>
             <li><a href="#lectures" data-section="lectures"><span class="dot"></span><span class="label">강연</span></a></li>
             <li><a href="#events" data-section="events"><span class="dot"></span><span class="label">행사</span></a></li>
-            <li><a href="#education" data-section="education"><span class="dot"></span><span class="label">학력</span></a></li>
+            <li><a href="#education" data-section="education"><span class="dot"></span><span class="label">학력·자격</span></a></li>
             <li><a href="#contact" data-section="contact"><span class="dot"></span><span class="label">연락처</span></a></li>
         </ul>
     </nav>
@@ -45,7 +45,7 @@
                 <li><a href="#publications">논문</a></li>
                 <li><a href="#conferences">학술대회</a></li>
                 <li><a href="#lectures">강연</a></li>
-                <li><a href="#education">학력</a></li>
+                <li><a href="#education">학력·자격</a></li>
                 <li><a href="#contact">연락처</a></li>
             </ul>
             <button class="nav-toggle" aria-label="메뉴 열기">
@@ -992,7 +992,7 @@
         <!-- Education Section -->
         <section id="education" class="section">
             <div class="container">
-                <h2 class="section-title">학력</h2>
+                <h2 class="section-title">학력 · 자격</h2>
 
                 <div class="education-timeline">
                     <div class="education-item">
@@ -1027,6 +1027,15 @@
                         </div>
                     </div>
                 </div>
+
+                <h3 class="subsection-title">자격</h3>
+                <ul class="cert-list">
+                    <li class="cert-item"><time>2026.09</time><strong>평생교육사 2급</strong><span>교육부</span></li>
+                    <li class="cert-item cert-ai"><time>2026.05</time><strong>AI Fluency for Educators</strong><span>Anthropic</span></li>
+                    <li class="cert-item cert-ai"><time>2025.09</time><strong>Gemini Certified Educator</strong><span>Google for Education</span></li>
+                    <li class="cert-item"><time>2016.12</time><strong>일반심리사</strong><span>한국심리학회</span></li>
+                    <li class="cert-item"><time>2013.12</time><strong>MOS Master 2010</strong><span>Microsoft</span></li>
+                </ul>
             </div>
         </section>
 
@@ -1222,7 +1231,7 @@
             /* --- 2. Reveal on scroll --- */
             const revealTargets = document.querySelectorAll(
                 '.section-title, .research-card, .skill-category, .publication-item, .conference-item, ' +
-                '.lecture-category, .event-item, .education-item, .now-card, .program-summary, .program-table-wrap, .contact-card');
+                '.lecture-category, .event-item, .education-item, .cert-item, .now-card, .program-summary, .program-table-wrap, .contact-card');
             revealTargets.forEach(el => { if (!el.classList.contains('section-title')) el.classList.add('reveal'); });
             const io = new IntersectionObserver(entries => {
                 entries.forEach(e => {
